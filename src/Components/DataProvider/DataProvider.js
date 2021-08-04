@@ -1,9 +1,10 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from 'react';
 
 export const DataContext = createContext();
 
 const DataProvider = (props) => {
-    const [products, setProducts] = useState([
+
+    const [products, setProducts] = useState[
 
         {
             "_id": "1",
@@ -106,13 +107,13 @@ const DataProvider = (props) => {
             "colors": ["red", "black", "teal"],
             "sizes": ["XL", "L", "M", "XM", "LX"],
             "price": 1060
-        }
-    ])
+        }]
+
     return (
         <DataContext.Provider values={[products, setProducts]}>
             {props.children}
         </DataContext.Provider>
-    )
-}
+    );
+};
 
-export default DataProvider
+export default DataProvider;
